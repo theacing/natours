@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited{
     font-size: $default-font-size;
@@ -9,7 +10,12 @@
     text-decoration: none;
     border-radius: 10rem;
     transition: all .2s;
+    z-index: 100;
 
+    //CHANGE FOR THE <BUTTON> ELEMENT
+
+    border: none;
+    cursor: pointer;
   }
 
   &::after{
@@ -22,19 +28,22 @@
     height: 100%;
     border-radius: 10rem;
     z-index: -1;
-    transition: all .4s;
+    transition: all .4s ;
   }
 
   &:hover{
     transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba($black, 0.2);
     &::after{
+      content: "";
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
 
-  &:active{
+  &:active,
+  &:focus{
+    outline: none;
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba($black, 0.2);
   }
@@ -51,6 +60,15 @@
   &--animated{
     animation: moveToTop .5s ease-out .75s;
     animation-fill-mode: backwards;
+  }
+
+  &--green{
+    color: $white;
+    background-color: $color-primary;
+    &::after{
+      content: "";
+      background-color: $color-primary;
+    }
   }
 }
 
@@ -81,12 +99,4 @@
   }
 }
 
-.btn--green{
-  color: $white;
-  background-color: $color-primary;
-  &::after{
-    content: "";
-    background-color: $color-primary;
-  }
-}
 
