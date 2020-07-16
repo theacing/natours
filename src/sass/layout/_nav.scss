@@ -133,6 +133,7 @@
     backface-visibility: hidden;
   }
   //&__checkbox:not(:checked) ~ &__nav &__list &__link{
+  //  display: inline-block;
   //  animation: navMoving2 1.5s ease-out;
   //}
 
