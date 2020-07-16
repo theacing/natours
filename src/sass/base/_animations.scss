@@ -30,6 +30,30 @@
   }
 }
 
+@keyframes navMoving {
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes navMoving2 {
+  0%{
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  100%{
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}
+
 @keyframes moveToTop {
   0%{
     opacity: 0;
