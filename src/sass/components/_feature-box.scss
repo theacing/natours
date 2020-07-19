@@ -6,6 +6,12 @@
   box-shadow: 0 1.5rem 4rem rgba($black, .15);
   transition: all .2s;
 
+  @include respond(tab-port){
+    padding: 1.5rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+
   &:hover{
     transform: scale(1.03) translateY(-1.5rem);
   }
@@ -17,5 +23,9 @@
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tab-port){
+      margin-bottom: 0;
+    }
   }
 }

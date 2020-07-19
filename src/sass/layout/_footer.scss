@@ -3,8 +3,17 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond( tab-port ){
+    padding: 5rem 0;
+  }
+
   &__logo-box{
     text-align: center;
+    margin-bottom: 8rem;
+
+    @include respond(tab-port){
+      margin-bottom: 4rem;
+    }
   }
   &__logo{
     width: 15rem;
@@ -14,6 +23,11 @@
     padding-top: 2rem;
     border-top: .1rem solid $color-grey-dark;
     display: inline-block;
+
+    @include respond( tab-port ){
+      width: 100%;
+      text-align: center;
+    }
   }
   &__list{
     list-style: none;
@@ -24,6 +38,11 @@
 
       &:not(:last-child){
         margin-right: 1.5rem;
+
+        @include respond(phone){
+          margin-right: .5rem;
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -50,6 +69,11 @@
     border-top: .1rem solid $color-grey-dark;
     width: 85%;
     float: right;
+
+    @include respond( tab-port ){
+      width: 100%;
+      float: none;
+    }
   }
 
   &__nickname{

@@ -16,6 +16,15 @@
     box-shadow: 0 1rem 3rem rgba($black, .1);
     text-align: center;
     cursor: pointer;
+
+    @include respond( tab-port ){
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond( phone ){
+      top: 3rem;
+      right: 3rem;
+    }
   }
   &__icon{
     position: relative;
@@ -54,6 +63,15 @@
     z-index: 1000;
 
     transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond( tab-port ){
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include respond( phone ){
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__nav{
     height: 100vh;
@@ -76,6 +94,9 @@
     text-align: center;
     &-item{
       margin: 1rem;
+    }
+    @include respond(phone){
+      width: 100%;
     }
   }
 
