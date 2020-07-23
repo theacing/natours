@@ -1,9 +1,13 @@
 .book{
-  background-image: linear-gradient(105deg, rgba($white, .9) 0%, rgba($white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, rgba($white, .9) 0%, rgba($white, .9) 50%, transparent 50%), url(../img/nat-10-small.jpg);
   background-size: cover;
 
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba($black, .2);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(105deg, rgba($white, .9) 0%, rgba($white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  }
 
   @include respond(tab-land){
     background-image: linear-gradient(105deg, rgba($white, .9) 0%, rgba($white, .9) 65%, transparent 65%), url(../img/nat-10.jpg);
